@@ -25,5 +25,4 @@ public class Reto2 {
             System.out.println(i + "^2 = " + suma + " = " + sum);
         }
     }
-    
 }
