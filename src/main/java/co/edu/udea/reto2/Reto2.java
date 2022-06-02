@@ -23,6 +23,7 @@ public class Reto2 {
             sum += res;
             suma += res + "+";
             System.out.println(i + "^2 = " + suma + " = " + sum);
+            System.out.println("Si");
         }
     }
     
