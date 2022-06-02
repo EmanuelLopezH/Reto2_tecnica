@@ -9,15 +9,11 @@ public class Reto2 {
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {      
-        sumCuadrada();
         // variables del problema
-        System.out.println("= = = = = = = = = = = = = = = = =");
-        System.out.println(" Desarrollos posibles de una BMT ");
-        System.out.println("= = = = = = = = = = = = = = = = =");
-        System.out.println("");
-        llenarPlatos();
-        llenarPinones();
-        llenarDimensiones();
+        sumCuadrada();
+        variables ();
+        
+        
     }
     
     static public void sumCuadrada(){
@@ -44,7 +40,15 @@ public class Reto2 {
  * @author WilmarOS
  */
 
-
+    public static void variables (){
+        System.out.println("= = = = = = = = = = = = = = = = =");
+        System.out.println(" Desarrollos posibles de una BMT ");
+        System.out.println("= = = = = = = = = = = = = = = = =");
+        System.out.println("");
+        llenarPlatos();
+        llenarPinones();
+        llenarDimensiones();
+    }
 
    
     public static void llenarPlatos(){
