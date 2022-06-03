@@ -3,6 +3,10 @@ package co.edu.udea.reto2;
 import java.util.Scanner;
 
 public class Reto2 {
+    static String op;
+    static double plato1, plato2, dim;
+    static double pinones[] = new double[12];
+    static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
         loop : while (true){
@@ -15,25 +19,25 @@ public class Reto2 {
             System.out.println("4. Salir");
             System.out.print("-> ");
             int num = entrada.nextInt();
-            try{
-            switch(num){
+            
+            switch (num) {
                 case 1:
                     sumCuadrada();
                     break;
                 case 2:
                     numPrimos();
                     break;
+                case 3:
+                    llenarPlatos();
+                    llenarPinones();
+                    llenarDimensiones();
+                    calculo();
+                    break;
                 case 4:
                     break loop;
                 default:
                     break;
-            }
-            } catch(Exception e){
-                System.out.println("error" + e);
-            }
-            
-                
-                    
+            }                 
         }
     }
     
@@ -85,4 +89,76 @@ public class Reto2 {
         System.out.println(primo);
         System.out.println("La suma de los " + n + " primeros números primos es: " + suma);        
 }
+    
+    public static void llenarPlatos(){
+        System.out.print("Ingrese el # de dientes del primer plato: ");
+        plato1 = scan.nextInt();
+        boolean continuar = false;
+        while(!continuar){
+            System.out.println("Desea ingresar el # de dientes del segundo plato?");
+            System.out.println(" > 1. Si");
+            System.out.println(" > 2. No");
+            int opt = scan.nextInt();
+            switch(opt){
+                case 1:
+                    System.out.print("Ingrese el # de dientes del segundo plato: ");
+                    plato2 = scan.nextInt();
+                    continuar = true;
+                    break;
+                case 2:
+                    plato2 = 0;
+                    continuar = true;
+                    break;
+                default:
+                    System.out.println("Has ingresado una opción invalida");
+            }
+            System.out.println("");
+        }
+    }
+   
+    public static void llenarPinones(){
+        int aux;
+        System.out.println("Ingrese el numero de dientes de los 12 piñones");
+        for(int i = 0; i < pinones.length; i++){
+            System.out.print("Piñon " + (i+1) + ": ");
+            aux = scan.nextInt();
+            pinones[i] = aux;
+        }
+        //System.out.println("");
+    }
+   
+    public static void llenarDimensiones(){
+        int aux;
+        System.out.println("Dimensiones de las llantas");
+        System.out.println(" > 1. 29x2.1");
+        System.out.println(" > 2. 29x2.2");
+        System.out.println(" > 3. 29x2.3");
+        System.out.print("Escriba el número de la dimensión correspondiente:");
+        aux = scan.nextInt();
+        switch(aux){
+            case 1:
+                dim = 2288;
+                break;
+            case 2:
+                dim = 2298;
+                break;
+            case 3:
+                dim = 2326;
+                break;
+        }
+    }
+    
+    public static void calculo(){
+        for (int i = 0; i < pinones.length; i++) {
+            double avanza;
+            avanza = (plato1/pinones[i])*dim;
+            System.out.println("Plato 1: piñon # " + (i+1) + " Avanza: "+ avanza + " mm");
+        }
+        System.out.println("");
+        for (int i = 0; i < pinones.length; i++) {
+            double avanza;
+            avanza = (plato2/pinones[i])*dim;
+            System.out.println("Plato 2: piñon # " + (i+1) + " Avanza: "+ avanza + " mm");
+        }
+    }
 }
