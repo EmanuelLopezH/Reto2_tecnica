@@ -1,5 +1,6 @@
 package co.edu.udea.reto2;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Reto2 {
@@ -18,26 +19,32 @@ public class Reto2 {
             System.out.println("3. Desarrollo de una MTB");
             System.out.println("4. Salir");
             System.out.print("-> ");
-            int num = entrada.nextInt();
+            try {
+                int num = entrada.nextInt();
+                switch (num) {
+                    case 1:
+                        sumCuadrada();
+                        break;
+                    case 2:
+                        numPrimos();
+                        break;
+                    case 3:
+                        llenarPlatos();
+                        llenarPinones();
+                        llenarDimensiones();
+                        calculo();
+                        break;
+                    case 4:
+                        break loop;
+                    default:
+                        break;
+                }
+            } catch(InputMismatchException e){
+                
+            }
             
-            switch (num) {
-                case 1:
-                    sumCuadrada();
-                    break;
-                case 2:
-                    numPrimos();
-                    break;
-                case 3:
-                    llenarPlatos();
-                    llenarPinones();
-                    llenarDimensiones();
-                    calculo();
-                    break;
-                case 4:
-                    break loop;
-                default:
-                    break;
-            }                 
+            
+                             
         }
     }
     
