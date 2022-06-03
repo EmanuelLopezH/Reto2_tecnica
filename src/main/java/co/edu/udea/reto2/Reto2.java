@@ -135,6 +135,7 @@ public class Reto2 {
         System.out.println(" > 3. 29x2.3");
         System.out.print("Escriba el número de la dimensión correspondiente:");
         aux = scan.nextInt();
+        
         switch(aux){
             case 1:
                 dim = 2288;
