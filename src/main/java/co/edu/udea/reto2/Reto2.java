@@ -1,10 +1,16 @@
 package co.edu.udea.reto2;
 
 import java.util.Scanner;
+/*
+Emanuel lopez 
+      &
+wilmar osorio
+*/
 
 public class Reto2 {
     static String op;
-    static int plato1, plato2, dim;
+    static float plato1, plato2, dim;
+    static int avance;
     static int pinones[] = new int[12];
     static Scanner scan = new Scanner(System.in);
 
@@ -48,6 +54,7 @@ public class Reto2 {
         llenarPlatos();
         llenarPinones();
         llenarDimensiones();
+        calculo();
     }
 
    
@@ -72,7 +79,7 @@ public class Reto2 {
             aux = scan.nextInt();
             pinones[i] = aux;
         }
-        System.out.println("");
+        //System.out.println("");
     }
    
     public static void llenarDimensiones(){
@@ -88,19 +95,28 @@ public class Reto2 {
         System.out.print("Escriba el número de la dimensión correspondiente:");
         aux = scan.nextInt();
         switch(aux){
-            case 1:
-                dim = 2288;
-                break;
-            case 2:
-                dim = 2298;
-                break;
-            case 3:
-                dim = 2326;
-                break;
+            case 1 -> dim = 2288;
+            case 2 -> dim = 2298;
+            case 3 -> dim = 2326;
         }
     }
    
     public static void calculo(){
+        //int j;
+        //for(int i= 0; i<24;i++){
+            
+        //}
+            
+        //p[j] = pinones[i];
+        
+        
+        //var ava = (plato1/pinones[i])*dim;
+        //System.out.println("avanza por cada pedaleada" + ava + "mm");
+        
+        //var ava1 = (plato2/pinones[i])*dim;
+        //System.out.println("avanza por cada pedaleada" + ava1);
+        
+        
         
     }
 }
