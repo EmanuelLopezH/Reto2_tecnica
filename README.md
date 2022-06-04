@@ -6,5 +6,3 @@ integrantes
 *cosas para aclarar*
 la aplicacion fue hecha para ser ejecutado en la consola
 
-## profe denos buena nota y que valga buen porcentaje
-## ¡gracias! <3
